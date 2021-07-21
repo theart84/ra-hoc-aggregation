@@ -9,7 +9,6 @@ const withSortTable = (Component, type) => {
   }
   HOCComponent.displayName = 'withSortTableHOC';
   return HOCComponent;
-
 };
 
 export default withSortTable;

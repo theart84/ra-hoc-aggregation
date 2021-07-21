@@ -1,7 +1,8 @@
 import shortid from "shortid";
+import PropTypes from 'prop-types';
 
-function MonthTable(props) {
-  console.log('MonthTable', props);
+function MonthTable({list}) {
+  console.log('MonthTable', list);
 
   return (
     <div>
@@ -11,7 +12,7 @@ function MonthTable(props) {
           <th>Month</th>
           <th>Amount</th>
         </tr>
-        {props.list.map(item => (
+        {list.map(item => (
           <tr key={shortid.generate()}>
             <td>{item.month}</td>
             <td>{item.amount}</td>
@@ -20,6 +21,10 @@ function MonthTable(props) {
       </table>
     </div>
   );
+}
+
+MonthTable.propTypes = {
+  list: PropTypes.array.isRequired
 }
 
 export default MonthTable;

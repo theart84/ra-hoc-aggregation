@@ -1,4 +1,5 @@
 import shortid from "shortid";
+import PropTypes from "prop-types";
 
 function SortTable(props) {
   console.log('SortTable', props);
@@ -20,6 +21,10 @@ function SortTable(props) {
       </table>
     </div>
   );
-};
+}
+
+SortTable.propTypes = {
+  list: PropTypes.array.isRequired
+}
 
 export default SortTable;

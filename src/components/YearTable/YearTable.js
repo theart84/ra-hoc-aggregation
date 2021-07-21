@@ -1,4 +1,5 @@
 import shortid from "shortid";
+import PropTypes from "prop-types";
 
 function YearTable(props) {
   console.log('YearTable', props);
@@ -20,6 +21,10 @@ function YearTable(props) {
       </table>
     </div>
   );
+}
+
+YearTable.propTypes = {
+  list: PropTypes.array.isRequired
 }
 
 export default YearTable;
